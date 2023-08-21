@@ -1,0 +1,32 @@
+.orders {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.orders_single {
+    display: flex;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    transition: 0.2s;
+}
+
+.orders__single:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+}  
+
+.orders__single--text {
+    font-size: 25px;
+    font-weight: bold;
+    cursor: 'no';
+}
+
+.orders_single--price {
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: 'no';
+}
