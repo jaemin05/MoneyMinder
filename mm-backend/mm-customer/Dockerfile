@@ -11,6 +11,10 @@ ENV DB_USERNAME ${DB_USERNAME}
 ARG DB_PASSWORD
 ENV DB_PASSWORD ${DB_PASSWORD}
 
+ARG ELK_VERSION
+FROM docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
+RUN elasticsearch-plugin install analysis-nori
+
 ARG JAR_FILE=/build/libs/market-customer-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} /app.jar
 

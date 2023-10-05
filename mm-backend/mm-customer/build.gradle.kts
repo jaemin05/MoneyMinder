@@ -53,6 +53,9 @@ dependencies {
     implementation("org.slf4j:slf4j-api:1.7.32")
     implementation("ch.qos.logback:logback-classic:1.2.6")
 
+    //elasticsearch
+    implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
+
     //redis
     implementation("org.springframework.boot:spring-boot-starter-data-redis")
 

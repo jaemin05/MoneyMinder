@@ -20,6 +20,7 @@ class OrderController(
     private val queryOrderService: QueryOrderService,
     private val updateOrderService: UpdateOrderService,
     private val deleteOrderService: DeleteOrderService,
+    private val queryOrderByNameService: QueryOrderByNameService,
 ) {
 
     companion object {
@@ -56,5 +57,11 @@ class OrderController(
     fun deleteProduct(@PathVariable(name = "id") id: Long) {
         logger.info("delete product in MySQL DB")
         deleteOrderService.deleteOrder(id)
+    }
+
+    @ResponseStatus(code = HttpStatus.OK)
+    @GetMapping("/product/name")
+    fun queryProductByName(@RequestParam(name = "name") name: String) {
+        queryOrderByNameService.getOrderByName(name)
     }
 }
